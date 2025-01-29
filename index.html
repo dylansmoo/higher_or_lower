@@ -8,10 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./headsOrTails.js" defer></script>
-    <script src="./MOLZeroToTen.js" defer></script>
-    <script src="MOLZeroToFifty.js" defer></script>
-    <script src="./MOLZeroToOneHundred.js" defer></script>
-    <script src="./MOLZeroToFiveHundred.js" defer></script>
+    <script src="./MoreOrLess.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,10 +22,10 @@
     </div>
     <div class="headsOrTailsContainer" onclick="headsOrTails()"><button>Heads or Tails <br>(WARM UP)</button></div>
     <div class="moreOrLessContainer">
-        <button class="button-easy" onclick="zeroToTen()">More or Less <br>(EASY)</button>
-        <button class="button-intermediate" onclick="zeroToFifty()">More or Less <br>(INTERMEDIATE)</button>
-        <button class="button-hard" onclick="zeroToOneHundred()">More or Less <br>(HARD)</button>
-        <button class="button-extreme" onclick="zeroToFiveHundred()">More or Less <br>(IMPOSSIBLE)</button>
+        <button class="button-easy" onclick="moreOrLess(5, 10)">More or Less <br>(EASY)</button>
+        <button class="button-intermediate" onclick="moreOrLess(5, 50)">More or Less <br>(INTERMEDIATE)</button>
+        <button class="button-hard" onclick="moreOrLess(6, 100)">More or Less <br>(HARD)</button>
+        <button class="button-extreme" onclick="moreOrLess(7, 500)">More or Less <br>(IMPOSSIBLE)</button>
     </div>
 </body>
 

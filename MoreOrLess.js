@@ -19,30 +19,28 @@ remember parseInt and isNaN and while loop.
     #6c: if false alert "better luck next time"
 
 */
-function zeroToFifty() {
+function moreOrLess(maxAttempts, maxNumber) {
     function playGame() {
-        alert("Welcome to more or less.. This game is simple. Your mission is to find the randomly generated number between 0 and 50. You only have 5 attempts to find the correct number. Good luck!");
+        alert(`Welcome to more or less.. This game is simple. Your mission is to find the randomly generated number between 0 and ${maxNumber}. You only have ${maxAttempts} attempts to find the correct number. Good luck!`);
 
         const startGame = confirm("Are you ready to play?");
         if (!startGame) {
             alert("GAME OVER. Try again");
             return;
         }
-        const randomNumber = getRandomIntInclusive(0, 50);
-
+        const randomNumber = getRandomIntInclusive(0, maxNumber);
 
         let counter = 0;
-        const maxAttempts = 5;
 
         {
             let playGame = true;
             while (playGame && counter != maxAttempts) {
 
-                let userInput = prompt(`Guess the number between 0 and 50. ${maxAttempts - counter} attempts remaining.`);
+                let userInput = prompt(`Guess the number between 0 and ${maxNumber}. ${maxAttempts - counter} attempts remaining.`);
                 let userNum = parseInt(userInput);
                 if (isNaN(userNum)) {
                     alert("That is not a valid number. GAME OVER!");
-                } else if (userNum > 50 || userNum <= -1) {
+                } else if (userNum > maxNumber || userNum <= -1) {
                     alert("That is not a valid number. GAME OVER!");
                     return;
                 }
