@@ -22,8 +22,12 @@ function headsOrTails() {
             alert("GAME OVER. Try again");
             return; //exits function
         }
+        let counter = 0;
+        const maxGames = 5;
+        let wins = 0;
+
         let keepPlaying = true;
-        while (keepPlaying) {
+        while (keepPlaying && counter < maxGames) {
             const randomNumber = getRandomIntInclusive(0, 1);
             const headsOrTails = randomNumber ? "heads" : "tails";
 
@@ -35,9 +39,11 @@ function headsOrTails() {
             }
             if (userAnswer.toLowerCase() == headsOrTails) {
                 alert("You win! Ready for another round?");
+                wins++;
             } else {
                 alert("You lose! Try again.");
             }
+            counter++;
         }
     }
 

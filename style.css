@@ -60,6 +60,9 @@ button {
   }
 
   button:hover {
-    background-color: rgb(107, 122, 186);
+    /* background-color: rgb(107, 122, 186); */
     cursor: pointer;
+    filter: brightness(80%);
   }
+
+  
